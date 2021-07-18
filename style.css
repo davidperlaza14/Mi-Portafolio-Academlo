@@ -2,7 +2,7 @@
   --color1: rgb(219,144,.5);
   --color2: rgb(3, 68, 9);
   --color3: rgb(11, 104, 211);
-  --fondo: #f2f2f2;
+  --fondo: #6e6b6b;
   --titulos: 33px;
   --margenes: 60px;
   --espacios: 10px;
@@ -24,6 +24,20 @@ img{
 }
 
 /* PRELOADERS */
+.hidden{
+  overflow: hidden;
+}
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .lds-facebook {
     display: inline-block;
     position: relative;
@@ -114,7 +128,7 @@ img{
   font-weight: 300;
   text-decoration: none;
   border-bottom: 3px solid transparent;
-  color: inherit;
+  color: #fff;
 }
 
 .nav .enlaces a:hover{
@@ -216,7 +230,7 @@ img{
 }
 
 .about{
-  background: linear-gradient(to bottom, rgb(3, 34, 100), rgb(15, 58, 2),rgb(2, 15, 0) 
+  background: linear-gradient(to bottom, rgb(3, 34, 100), rgb(210, 245, 200),rgb(2, 15, 0) 
      );
   height: auto;
   
@@ -231,7 +245,9 @@ img{
 }
 .caja-servicios>h4{
   margin-bottom: var(--espacios);
+  width: 90%;
 }
+
 
 .caja-servicios>p{
   text-align: center;
@@ -332,4 +348,71 @@ footer{
 
 footer p{
   margin-top: var(--espacios);
+}
+
+@media screen and (max-width: 700px){
+  .nav{
+    color: #fff;
+    
+  }
+  .icono{
+    display: block;
+    cursor: pointer;
+  }
+  .enlaces{
+    position: fixed;
+    top: 80px;
+    background: #2c3e50;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+
+  }
+  .enlaces a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    
+  }
+
+  .text>h1{font-size: 70px;}
+  .text>h1{font-size: 35px;}
+  .content-card{
+    width: 48%;
+    margin-bottom: var(--margenes);
+  }
+  :root{
+    --margenes: 38px;
+  }
+    
+
+  
+}
+
+@media screen and (max-width: 500px) {
+ 
+    :root{
+      --espacio-contenido: 25px;
+    }
+    .content-card{
+      width: 90%;
+}
+
+.img-work{
+  width: 85%; 
+}
+
+.marca-logo{
+  /* width: 85%; */
+}
+
+.iconos{
+    margin: auto;
+}
+
 }
